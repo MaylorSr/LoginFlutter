@@ -45,7 +45,8 @@ class _LoginDemoState extends State<LoginDemo> {
           'username': createUserRequest.username,
           'password': createUserRequest.password
         }));
-    if (res.statusCode == 201) {
+    print(res.statusCode);
+    if (res.statusCode != 401) {
       // ignore: use_build_context_synchronously
       Navigator.push(
           context,
@@ -162,6 +163,8 @@ class _RegisterDemoState extends State<registerDemo> {
           'password': createNewUserDto.password,
           'fullName': createNewUserDto.fullName
         }));
+    print(res.statusCode);
+
     if (res.statusCode == 201) {
       // ignore: use_build_context_synchronously
       Navigator.push(
