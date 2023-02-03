@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const Scaffold(body: LoginDemo()),
     );
   }
@@ -66,9 +67,9 @@ class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Colors.green,
         title: const Text("Real Betis Balompie"),
         titleTextStyle: const TextStyle(
           fontSize: 32,
@@ -173,6 +174,7 @@ class _RegisterDemoState extends State<registerDemo> {
             builder: (context) => DashBoardDemo(),
           ));
     } else {
+      // ignore: use_build_context_synchronously
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -184,8 +186,8 @@ class _RegisterDemoState extends State<registerDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.green,
         centerTitle: true,
         title: const Text("Real Betis Balompie"),
         titleTextStyle: const TextStyle(
